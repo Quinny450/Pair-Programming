@@ -8,13 +8,15 @@ public class ticTacToe
         boolean isWon = false;
 
         System.out.println("Welcome to Tic Tac Toe!");
-        System.out.println("Player 1, you are X. Player 2, you are O.");
-        System.out.println("Player 1 goes first.");
+        System.out.println("The number assiciated with each cell is as follows:");
+        System.out.println("[1] [2] [3]");
+        System.out.println("[4] [5] [6]");
+        System.out.println("[7] [8] [9]");
 
         while (!isWon)
         {
             System.out.println("Promt for player 1 input (Cell to input to)");
-            String cellSelection = input.nextLine();
+            int cellSelection = input.nextInt();
 
             System.out.println("Prompt for String input into cellSelection");
             String turn1 = input.nextLine();
