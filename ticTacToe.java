@@ -26,7 +26,13 @@ public class ticTacToe {
             int row1 = ticTacToeMethods.getRow(cellSelection);
             int col1 = ticTacToeMethods.getColumn(cellSelection);
 
-            ticTacToeMethods.printBoard(turn1, row1, col1);
+            if (ticTacToeMethods.checkTile(row1, col1)) {
+                System.out.println("That tile is already taken! Please select another tile.");
+                continue;
+            }
+            else {
+                ticTacToeMethods.printBoard(turn1, row1, col1);
+            }
 
             if (ticTacToeMethods.checkWin()) {
                 System.out.println("Player 1 wins!");

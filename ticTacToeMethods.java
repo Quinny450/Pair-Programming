@@ -54,6 +54,16 @@ public class ticTacToeMethods {
         return false;
     }
 
+    // Checks if tile is already taken
+    public static boolean checkTile(int row, int col) {
+        if (gameState[row][col].equals("[ ]")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     // Prints the gameState array
     public static void printBoard(String val, int row, int col) {
         gameState[row][col] = "[" + val + "]";
