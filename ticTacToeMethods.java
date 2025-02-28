@@ -2,7 +2,8 @@ public class ticTacToeMethods
 {
     public static String[][] gameState;
 
-    public ticTacToeMethods() {
+    public ticTacToeMethods()
+    {
         gameState = new String[][]
         {
             {"[ ]", "[ ]", "[ ]"},
