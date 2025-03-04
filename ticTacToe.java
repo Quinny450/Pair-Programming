@@ -76,5 +76,6 @@ public class ticTacToe {
                 }
             }
         }
+        input.close();
     }
 }
