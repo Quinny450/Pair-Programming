@@ -2,10 +2,13 @@ import java.util.Scanner;
 
 public class ticTacToe {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
+
         int isWon = 0;
         boolean validTurn1 = true;
         boolean validTurn2 = true;
+        
         String turn1 = "X";
         String turn2 = "O";
 
