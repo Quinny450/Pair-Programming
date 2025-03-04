@@ -20,7 +20,7 @@ public class ticTacToe {
         while (isWon < 9) {
             while (validTurn1) {
                 // Turn 1 input
-                System.out.println("Player 1, please enter the cell you would like to place your X in:");
+                System.out.println("Player 1, please enter the number for the cell you would like to place your X in:");
                 int cellSelection = input.nextInt();
                 input.nextLine();
 
@@ -52,7 +52,7 @@ public class ticTacToe {
 
             while (validTurn2) {
                 // Turn 2 input
-                System.out.println("Player 2, please enter the cell you would like to place your O in:");
+                System.out.println("Player 2, please enter the number for the cell you would like to place your O in:");
                 int cellSelection2 = input.nextInt();
                 input.nextLine();
 
