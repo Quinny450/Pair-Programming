@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class ticTacToe {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
