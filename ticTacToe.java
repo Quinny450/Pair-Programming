@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
-public class ticTacToe {
+public class ticTacToe
+{
     @SuppressWarnings("unused")
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Scanner input = new Scanner(System.in);
 
@@ -21,8 +23,10 @@ public class ticTacToe {
         System.out.println("[4] [5] [6]");
         System.out.println("[7] [8] [9]");
 
-        while (isWon < 9) {
-            while (validTurn1) {
+        while (isWon < 9)
+        {
+            while (validTurn1)
+            {
                 // Turn 1 input
                 System.out.println("Player 1, please enter the number for the cell you would like to place your X in:");
                 int cellSelection = input.nextInt();
@@ -31,30 +35,36 @@ public class ticTacToe {
                 int row1 = ticTacToeMethods.getRow(cellSelection);
                 int col1 = ticTacToeMethods.getColumn(cellSelection);
 
-                if (!ticTacToeMethods.checkTile(row1, col1)) {
+                if (!ticTacToeMethods.checkTile(row1, col1))
+                {
                     System.out.println("That tile is already taken! Please select another tile.");
                     validTurn1 = true;
                     validTurn2 = false;
-                } else {
+                }
+                else
+                {
                     ticTacToeMethods.printBoard(turn1, row1, col1);
                     isWon++;
                     validTurn1 = false;
                     validTurn2 = true;
                 }
 
-                if (ticTacToeMethods.checkWin()) {
+                if (ticTacToeMethods.checkWin())
+                {
                     System.out.println("Player 1 wins!");
                     System.exit(0);
                 }
             }
 
             // Check for turn limit
-            if (isWon >= 9) {
+            if (isWon >= 9)
+            {
                 System.out.println("The game is a draw!");
                 break;
             }
 
-            while (validTurn2) {
+            while (validTurn2)
+            {
                 // Turn 2 input
                 System.out.println("Player 2, please enter the number for the cell you would like to place your O in:");
                 int cellSelection2 = input.nextInt();
@@ -63,18 +73,22 @@ public class ticTacToe {
                 int row2 = ticTacToeMethods.getRow(cellSelection2);
                 int col2 = ticTacToeMethods.getColumn(cellSelection2);
 
-                if (!ticTacToeMethods.checkTile(row2, col2)) {
+                if (!ticTacToeMethods.checkTile(row2, col2))
+                {
                     System.out.println("That tile is already taken! Please select another tile.");
                     validTurn2 = true;
                     validTurn1 = false;
-                } else {
+                }
+                else
+                {
                     ticTacToeMethods.printBoard(turn2, row2, col2);
                     isWon++;
                     validTurn2 = false;
                     validTurn1 = true;
                 }
 
-                if (ticTacToeMethods.checkWin()) {
+                if (ticTacToeMethods.checkWin())
+                {
                     System.out.println("Player 2 wins!");
                     System.exit(0);
                 }
